@@ -1,0 +1,56 @@
+.textContainer h1{
+    color: #fff474;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+.outerContainer{
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    width: 80%;
+}
+
+.messages{
+    height: 500px;
+    background-color: white;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.form input{
+    width: 80%;
+    border: #fff474 solid;
+    padding: .6rem;
+    font-size: 1.2rem;
+}
+
+.form .sendButton{
+    background-color: #fff474;
+    color: #3c3b5f;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 20%;
+}
+
+.changeRoom{
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #fff474;
+    color: #3c3b5f;
+    padding: 1rem;
+}
+

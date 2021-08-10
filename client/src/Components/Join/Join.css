@@ -1,0 +1,80 @@
+/* .paper{
+    padding-top: 30px;
+}
+
+.form{
+    background-color: white;
+    margin-bottom: auto;
+}
+
+.submit{
+    margin-top: 20px;
+} */
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #3c3b5f;
+}
+
+.joinOuterContainer{
+    position: absolute;
+    top: 20%;
+    left:10%;
+    width: 80%;
+    height: 50%;
+    background-color: #3c3b5f;
+}
+
+.joinInnerContainer{
+    position: relative;
+    top:20%;
+    width: 80%;
+    max-width: 800px;
+    height: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.joinInnerContainer .heading{
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #fff474;
+    text-align: center;
+}
+
+.joinInnerContainer div{
+    position: relative;
+    top: 20%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.joinInput{
+    position: relative;
+    top:10%;
+    width: 60%;
+    height: 20%;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.joinInnerContainer .button{
+    position: relative;
+    top: 50%;
+    width: 300px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #fff474;
+    color: #3c3b5f;
+    padding: 1rem;
+}
+
+.joinInnerContainer .button:hover{
+    border: white solid;
+}

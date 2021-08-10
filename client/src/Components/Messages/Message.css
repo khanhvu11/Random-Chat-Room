@@ -1,0 +1,53 @@
+.messageContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.justifyEnd{
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+.justifyStart{
+    justify-content: flex-start;
+    margin-left: 1rem;
+}
+
+.messageBox{
+    position: relative;
+    border-radius: .5rem;
+    text-align: center;
+    margin: 0;
+}
+
+.messageText {
+    position: relative;
+    margin: 0;
+    padding: .7rem;
+    font-size: 1.2rem;
+}
+
+.sentText{
+    font-size: 1rem;
+}
+
+.pl-10{
+    padding-left: 1rem;
+}
+
+.pr-10{
+    padding-right: 1rem;
+}
+
+.backgroundBlue{
+    background-color: #3b3c5f;
+}
+
+.backgroundLight{
+    background-color: #fff474;
+}
+
+.colorWhite{
+    color: white;
+}
