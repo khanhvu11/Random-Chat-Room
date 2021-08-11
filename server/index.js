@@ -25,9 +25,9 @@ io.on('connection', (socket)=>{
     socket.on('join', ({name}, callback)=>{
         const {error ,user} = addUser({id: socket.id, name}) 
         console.log('adding user', user)
-        /* if(error){
+        if(error){
             return callback(error)
-        }   */  
+        }    
 
         if (queue.length > 0) {
             var partner= queue.pop();

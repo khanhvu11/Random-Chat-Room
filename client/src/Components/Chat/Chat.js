@@ -6,13 +6,14 @@ import Input from '../Input/Input'
 import TextContainer from '../TextContainer/TextContainer';
 import Messages from '../Messages/Messages';
 
-import {Link} from 'react-router-dom'
+import {/* Link, */ useHistory} from 'react-router-dom'
 
 import './Chat.css'
 
 let socket
 
 function Chat() {
+    const history = useHistory()
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
     const [message, setMessage] = useState('');
@@ -27,16 +28,27 @@ function Chat() {
 
         setName(name)
         
-        socket.emit('join', {name}, ()=>{
-            
+        socket.emit('join', {name}, (error)=>{
+            if(error){
+                alert(error)
+                history.push({
+                    pathname: '/'
+                  });
+      
+            }
         })
 
         return () =>{
-            socket.emit('disconnect')
+            /* socket.emit('disconnect', () => {
+                history.push({
+                    pathname: '/'
+                  });
+      
+            }) */
 
             socket.off()
         }
-    }, [ENDPOINT])
+    }, [ENDPOINT, history])
 
     useEffect(()=> {
         socket.on('start chat', ({room})=>{
@@ -79,9 +91,9 @@ function Chat() {
                 <Messages messages={messages} name={name} />
                 <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
             </div>
-            <Link onClick={event => (!name) ? event.preventDefault() : null} to={`/chat?name=${name}`}>
+            {/* <Link onClick={event => (!name) ? event.preventDefault() : null} to={`/chat?name=${name}`}>
                 <button className='changeRoom' type='button'>Change Room</button>
-            </Link>
+            </Link> */}
         </div>
     )
 }
