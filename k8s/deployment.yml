@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: random-chat-deployment
+  labels:
+    app: random-chat
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: random-chat
+  template:
+    metadata:
+      labels:
+        app: random-chat
+    spec:
+      containers:
+      - name: random-chat
+        image: 304764655629.dkr.ecr.eu-central-1.amazonaws.com/randomchat_image:v1
+        ports:
+        - containerPort: 8080
