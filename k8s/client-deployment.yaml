@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client
+spec:
+  selector:
+    matchLabels:
+      app: random-chat
+      tier: client
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: random-chat
+        tier: client
+        track: stable
+    spec:
+      containers:
+        - name: client
+          image: "304764655629.dkr.ecr.eu-central-1.amazonaws.com/random-chat-client"
