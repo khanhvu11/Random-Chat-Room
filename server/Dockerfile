@@ -15,5 +15,9 @@ COPY . .
 # start app
 CMD ["npm", "start"]
 
+<<<<<<< HEAD
 RUN chmod +x /server/node_modules/.bin/nodemon
 
+=======
+RUN chmod +x /server/node_modules/.bin/nodemon
+>>>>>>> 2c7b1513e48c83bd55d87af5334438c20b48f41d

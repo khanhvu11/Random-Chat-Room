@@ -10,4 +10,8 @@ spec:
   - protocol: "TCP"
     port: 80
     targetPort: 3000
+<<<<<<< HEAD:k8s/client-sevice.yaml
   type: LoadBalancer
+=======
+  type: LoadBalancer
+>>>>>>> 2c7b1513e48c83bd55d87af5334438c20b48f41d:k8s/client-service.yaml
