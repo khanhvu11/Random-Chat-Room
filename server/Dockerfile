@@ -1,7 +1,7 @@
 FROM node:16-alpine
 
 WORKDIR /server
-RUN npm install -g nodemon
+#RUN npm install -g nodemon
 # install app dependencies
 COPY package.json .
 
