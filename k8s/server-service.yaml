@@ -8,14 +8,8 @@ spec:
     tier: server
   ports:
   - protocol: TCP
-<<<<<<< HEAD
     port: 80
     targetPort: 5000
   type: LoadBalancer
 
 
-=======
-    port: 5000
-    targetPort: 5000
-  type: LoadBalancer
->>>>>>> 62ddb2e508c21b24b047080842890e8731eb2c5f
