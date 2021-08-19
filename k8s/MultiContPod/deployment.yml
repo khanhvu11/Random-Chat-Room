@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multi-container-pod
+spec:
+  selector:
+    matchLabels:
+      app: multi-container-pod
+  replicas: 3
+  containers:
+  - name: client
+    image: "304764655629.dkr.ecr.eu-central-1.amazonaws.com/random-chat-client"
+  - name: server
+    image: "304764655629.dkr.ecr.eu-central-1.amazonaws.com/random-chat-server"
