@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: random-chat
+  name: localhost
 spec:
   selector:
     app: random-chat
     tier: server
   ports:
   - protocol: TCP
-    port: 80
+    port: 5000
     targetPort: http

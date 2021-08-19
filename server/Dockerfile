@@ -1,23 +1,19 @@
 FROM node:16-alpine
 
 WORKDIR /server
-
+RUN npm install -g nodemon
 # install app dependencies
 COPY package.json .
 
 COPY package-lock.json .
 
-RUN sudo npm install
+RUN npm install
 
 # add app
 COPY . .
 
+EXPOSE 5000
+
 # start app
-CMD ["npm", "start"]
+CMD ["sleep", "3600"]
 
-<<<<<<< HEAD
-RUN chmod +x /server/node_modules/.bin/nodemon
-
-=======
-RUN chmod +x /server/node_modules/.bin/nodemon
->>>>>>> 2c7b1513e48c83bd55d87af5334438c20b48f41d
