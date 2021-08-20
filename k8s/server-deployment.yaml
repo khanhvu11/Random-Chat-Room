@@ -19,4 +19,6 @@ spec:
       containers:
         - name: random-chat-server
           image: "304764655629.dkr.ecr.eu-central-1.amazonaws.com/random-chat-server"
+          ports:
+            - containerPort: 5000
 
