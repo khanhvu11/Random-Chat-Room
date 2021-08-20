@@ -1,6 +1,7 @@
 const express = require('express')
 const http = require('http')
 const socketio = require('socket.io')
+var redis = require('socket.io-redis')
 const cors = require('cors')
 
 const { addUser, removeUser, getUser, getUserInRoom} = require('./users')
@@ -18,6 +19,8 @@ const io = socketio(server, {
       origin: '*',
     }
   });
+
+io.adapter(redis({ host: process.env.REDIS_ENDPOINT, port: 6379 }));
 
 var queue = []
 
