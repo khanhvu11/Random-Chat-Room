@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+spec:
+  selector:
+    matchLabels:
+      app: redis
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: random-chat-server
+    spec:
+      containers:
+        - name: redis
+          image: "304764655629.dkr.ecr.eu-central-1.amazonaws.com/redis"
+          ports:
+            - containerPort: 6379
