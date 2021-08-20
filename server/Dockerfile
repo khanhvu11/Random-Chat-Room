@@ -15,5 +15,5 @@ COPY . .
 EXPOSE 5000
 
 # start app
-CMD ["sleep", "3600"]
+CMD ["npm", "start"]
 
