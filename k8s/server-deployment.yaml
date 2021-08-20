@@ -5,17 +5,18 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: random-chat
+      app: random-chat-server
       tier: server
       track: stable
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
-        app: random-chat
+        app: random-chat-server
         tier: server
         track: stable
     spec:
       containers:
-        - name: random-chat
+        - name: random-chat-server
           image: "304764655629.dkr.ecr.eu-central-1.amazonaws.com/random-chat-server"
+

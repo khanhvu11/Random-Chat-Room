@@ -4,10 +4,10 @@ metadata:
   name: server
 spec:
   selector:
-    app: random-chat
+    app: random-chat-server
     tier: server
   ports:
-  - protocol: TCP
+  - protocol: "TCP"
     port: 80
     targetPort: 5000
   type: LoadBalancer
