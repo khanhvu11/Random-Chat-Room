@@ -19,7 +19,8 @@ function Chat() {
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
     const [users, setUsers] = useState('');
-    const ENDPOINT = 'localhost:5000'
+    const ENDPOINT = '
+    aa1ee3b9bd82b48f4a3007463a702d75-73828109.eu-central-1.elb.amazonaws.com'
 
     useEffect(()=>{
         const {name} = queryString.parse(window.location.search)
