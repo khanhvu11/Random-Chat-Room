@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: random-chat-server
+        app: redis
     spec:
       containers:
         - name: redis

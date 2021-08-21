@@ -8,7 +8,7 @@ spec:
       app: random-chat-server
       tier: server
       track: stable
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
