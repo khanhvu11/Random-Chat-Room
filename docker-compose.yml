@@ -1,20 +1,14 @@
 version: "3.8"
-networks:
-  chat:
 
 services:
   # Launch the Redis used for syncing messages between copies of the client app
   redis:
     image: redis
-    networks:
-      - chat
     ports:
       - 6379:6379
 
   client:
     container_name: client
-    networks:
-      - chat
     build:
       context: ./client
     volumes:
@@ -26,10 +20,6 @@ services:
 
   server:
     container_name: server
-    depends_on:
-      - redis
-    networks:
-      - chat
     build:
       context: ./server
     environment:
